@@ -25,6 +25,11 @@ steps:
     organization: 'murt30'
     scannerMode: 'other'
     
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '17'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
 - task: Maven@4
 
   inputs:
@@ -33,7 +38,7 @@ steps:
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       javaHomeOption: 'JDKVersion'
-      mavenVersionOption: '1.8'
+      mavenVersionOption: '1.17'
       mavenAuthenticateFeed: false
       effectivePomSkip: false
       sonarQubeRunAnalysis: true
