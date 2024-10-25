@@ -42,9 +42,11 @@ steps:
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'latest'
-      goals: 'spring-javaformat:apply package'
       sonarQubeRunAnalysis: true
+      goals: 'spring-javaformat:apply package'
+      
 
+- task: SonarCloudAnalyze@3
 
 - task: SonarCloudPublish@3
   inputs:
