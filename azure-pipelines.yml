@@ -25,7 +25,14 @@ steps:
     organization: 'murt30'
     scannerMode: 'other'
     
-
-- task: SonarCloudAnalyze@3
+- task: Maven@4
   inputs:
-    jdkversion: 'JAVA_HOME'    
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'latest'
