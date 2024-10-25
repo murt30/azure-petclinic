@@ -22,7 +22,7 @@ steps:
 - task: SonarCloudPrepare@3
   inputs:
     SonarCloud: 'azure2024'
-    organization: 'murt30'
+    organization: 'PadraicMoriarty2024'
     scannerMode: 'other'
     
 - task: JavaToolInstaller@0
@@ -40,10 +40,10 @@ steps:
       javaHomeOption: 'JDKVersion'
       mavenVersionOption: '1.17'
       mavenAuthenticateFeed: false
-      effectivePomSkip: false
-      sonarQubeRunAnalysis: false
+      effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'latest'
       goals: 'spring-javaformat:apply package'
+      sonarCloudRunAnalysis: true
 
 
 - task: SonarCloudAnalyze@3
