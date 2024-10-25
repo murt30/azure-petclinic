@@ -41,12 +41,14 @@ steps:
       mavenVersionOption: '1.17'
       mavenAuthenticateFeed: false
       effectivePomSkip: false
-      sonarQubeRunAnalysis: true
+      sonarQubeRunAnalysis: false
       sqMavenPluginVersionChoice: 'latest'
       goals: 'spring-javaformat:apply package'
 
 
-
+- task: SonarCloudAnalyze@3
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
 - task: SonarCloudPublish@3
   inputs:
     pollingTimeoutSec: '300'
