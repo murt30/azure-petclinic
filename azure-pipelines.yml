@@ -1,5 +1,6 @@
 # Starter pipeline
 
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -17,8 +18,14 @@ steps:
   displayName: 'Run a multi-line script'
   
 
+
 - task: SonarCloudPrepare@3
   inputs:
     SonarCloud: 'azure2024'
     organization: 'murt30'
     scannerMode: 'other'
+    
+
+- task: SonarCloudAnalyze@3
+  inputs:
+    jdkversion: 'JAVA_HOME'    
