@@ -43,7 +43,7 @@ steps:
       effectivePomSkip: false
       sonarQubeRunAnalysis: true
       sqMavenPluginVersionChoice: 'latest'
-      goals: 'package'
+      goals: 'spring-javaformat:apply package'
 
 
 
