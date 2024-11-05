@@ -42,12 +42,25 @@ steps:
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'latest'
-      sonarQubeRunAnalysis: true
+      sonarQubeRunAnalysis: false
       goals: 'spring-javaformat:apply package'
       
 
 - task: SonarCloudAnalyze@3
-
+     
+          
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: '1.17'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: true
+    sqMavenPluginVersionChoice: 'pom'
+    mavenOptions: mvn sonar:sonar
 - task: SonarCloudPublish@3
   inputs:
     pollingTimeoutSec: '300'
