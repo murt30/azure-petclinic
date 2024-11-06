@@ -26,6 +26,18 @@ steps:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
+    
+
+- task: SonarCloudPrepare@3
+
+  inputs:
+
+        SonarCloud: 'azure2024'
+
+        organization: 'murt30'
+
+        scannerMode: 'other'
+
 - task: Maven@4
 
   inputs:
@@ -38,22 +50,13 @@ steps:
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'latest'
-      sonarQubeRunAnalysis: true
+      sonarQubeRunAnalysis: false
       goals: 'spring-javaformat:apply package'
       
-- task: SonarCloudPrepare@3
-
-  inputs:
-
-        SonarCloud: 'azure2024'
-
-        organization: 'murt30'
-
-        scannerMode: 'other'
-
 
 - task: SonarCloudAnalyze@3
 
   inputs:
 
-            jdkversion: 'JAVA_HOME_17_X64'
+            jdkversion: 'JAVA_HOME'
+
