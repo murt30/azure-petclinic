@@ -38,11 +38,11 @@ steps:
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       javaHomeOption: 'JDKVersion'
-      mavenVersionOption: '1.17'
+      mavenVersionOption: 'Default'
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'latest'
-      sonarQubeRunAnalysis: false
+      sonarQubeRunAnalysis: true
       goals: 'spring-javaformat:apply package'
       
 - task: SonarCloudPrepare@3
