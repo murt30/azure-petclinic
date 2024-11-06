@@ -19,11 +19,7 @@ steps:
   
 
 
-- task: SonarCloudPrepare@3
-  inputs:
-    SonarCloud: 'azure2024'
-    organization: 'murt30'
-    scannerMode: 'other'
+
     
 - task: JavaToolInstaller@0
   inputs:
