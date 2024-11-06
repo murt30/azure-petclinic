@@ -50,7 +50,7 @@ steps:
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'latest'
-      sonarQubeRunAnalysis: true
+      sonarQubeRunAnalysis: false
       goals: 'spring-javaformat:apply package'
       
 
