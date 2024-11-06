@@ -53,7 +53,7 @@ steps:
 
         organization: 'murt30'
 
-        scannerMode: 'java'
+        scannerMode: 'other'
 
 
 - task: SonarCloudAnalyze@3
