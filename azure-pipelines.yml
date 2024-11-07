@@ -23,7 +23,7 @@ steps:
   inputs:
         SonarCloud: 'azure2024'
        # organization: 'murt30'
-        organization: 'murt30'
+        organization: 'spring-petclinic'
         scannerMode: 'Other'
 
 
@@ -44,8 +44,8 @@ steps:
       publishJUnitResults: true
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       javaHomeOption: 'JDKVersion'
-      mavenVersionOption: 'Path'
-      mavenPath: '/usr/share.apache-maven-4.246.1'
+      mavenVersionOption: 'Default'
+     # mavenPath: '/usr/share.apache-maven-4.246.1'
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'pom'
