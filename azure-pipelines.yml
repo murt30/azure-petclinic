@@ -17,12 +17,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-- task: Docker@2
-  inputs:
-    containerRegistry: 'murtdocker/petclinic'
-    repository: 'petclinic'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
 
 - task: SonarCloudPrepare@3
 
