@@ -24,6 +24,15 @@ steps:
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
 
+- task: SonarCloudPrepare@3
+
+  inputs:
+
+        SonarCloud: 'azure2024'
+
+        organization: 'murt30'
+
+        scannerMode: 'other'
 
 
     
@@ -34,15 +43,6 @@ steps:
     jdkSourceOption: 'PreInstalled'
     
 
-- task: SonarCloudPrepare@3
-
-  inputs:
-
-        SonarCloud: 'azure2024'
-
-        organization: 'murt30'
-
-        scannerMode: 'other'
 
 - task: Maven@4
 
