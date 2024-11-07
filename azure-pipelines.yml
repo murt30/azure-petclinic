@@ -59,4 +59,9 @@ steps:
   inputs:
 
             jdkversion: 'JAVA_HOME'
-
+- task: Docker@2
+  inputs:
+    containerRegistry: 'murtdocker/petclinic'
+    repository: 'petclinic'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
