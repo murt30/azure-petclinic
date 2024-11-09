@@ -28,11 +28,11 @@ steps:
 
 
 
-#- task: JavaToolInstaller@0
-#  inputs:
-#    versionSpec: '17'
-#    jdkArchitectureOption: 'x64'
-#    jdkSourceOption: 'PreInstalled'
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '17'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'PreInstalled'
     
 
 
@@ -65,11 +65,11 @@ steps:
     publishJUnitResults: true
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-    sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
-    codeCoverageToolOption: 'JaCoCo'
+    #codeCoverageToolOption: 'JaCoCo'
+    sonarQubeRunAnalysis: true
     testResultsFiles: '**/TEST-*.xml'
-    goals: 'spring-javaformat:apply -Dcheckstyle.skip verify'
+    goals: '-Dcheckstyle.skip spring-javaformat:apply  verify'
 - task: SonarCloudAnalyze@3
 
   inputs:
