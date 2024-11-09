@@ -69,7 +69,7 @@ steps:
     sqMavenPluginVersionChoice: 'latest'
     codeCoverageToolOption: 'JaCoCo'
     testResultsFiles: '**/TEST-*.xml'
-    goals: 'verify'
+    goals: 'spring-javaformat:apply verify'
 - task: SonarCloudAnalyze@3
 
   inputs:
