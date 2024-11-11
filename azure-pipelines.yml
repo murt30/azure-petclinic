@@ -58,7 +58,7 @@ steps:
     mavenPomFile: 'pom.xml'
     options: '-Dmaven.test.failure.ignore=true'
     #mavenOptions: '-Xmx3072m'
-    mavenVersionOption: 'Default'
+    mavenVersionOption: '5'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '11'
     jdkArchitectureOption: 'x64'
