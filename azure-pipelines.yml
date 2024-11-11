@@ -69,7 +69,7 @@ steps:
     #codeCoverageToolOption: 'JaCoCo'
     sonarQubeRunAnalysis: true
     testResultsFiles: '**/TEST-*.xml'
-    goals: '-Dcheckstyle.skip spring-javaformat:apply  verify'
+    goals: '-Dcheckstyle.skip spring-javaformat:apply  package'
 - task: SonarCloudAnalyze@3
 
   inputs:
