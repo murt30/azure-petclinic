@@ -74,4 +74,4 @@ steps:
 
   inputs:
 
-            jdkversion: 'JAVA_HOME'
+    jdkversion: 'JAVA_HOME'
