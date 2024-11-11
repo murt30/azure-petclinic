@@ -22,8 +22,8 @@ steps:
   displayName: 'Configure SonarCloud'
   inputs:
         SonarCloud: 'azure2024'
-        #organization: 'murt30'
-        organization: 'spring-petclinic'
+        organization: 'murt30'
+        #organization: 'spring-petclinic'
         scannerMode: 'Other'
 
 
@@ -69,7 +69,8 @@ steps:
     #codeCoverageToolOption: 'JaCoCo'
     sonarQubeRunAnalysis: true
     testResultsFiles: '**/TEST-*.xml'
-    goals: '-Dcheckstyle.skip spring-javaformat:apply  package'
+    #goals: '-Dcheckstyle.skip spring-javaformat:apply  package'
+    goals: 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=murt30-1'
 - task: SonarCloudAnalyze@3
 
   inputs:
