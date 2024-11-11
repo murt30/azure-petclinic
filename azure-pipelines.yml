@@ -57,7 +57,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     options: '-Dmaven.test.failure.ignore=true'
-    mavenOptions: '-Xmx3072m'
+    #mavenOptions: '-Xmx3072m'
     mavenVersionOption: 'Default'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.7'
