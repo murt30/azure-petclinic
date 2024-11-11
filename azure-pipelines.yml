@@ -22,8 +22,8 @@ steps:
   displayName: 'Configure SonarCloud'
   inputs:
         SonarCloud: 'azure2024'
-        organization: 'murt30'
-        #organization: 'spring-petclinic'
+        #organization: 'murt30'
+        organization: 'spring-petclinic'
         scannerMode: 'Other'
 
 
