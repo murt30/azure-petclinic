@@ -61,7 +61,7 @@ steps:
     #mavenOptions: '-Xmx3072m'
     mavenVersionOption: '5'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '11'
+    jdkVersionOption: '17'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     mavenAuthenticateFeed: false
