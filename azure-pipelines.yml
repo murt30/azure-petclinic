@@ -37,41 +37,41 @@ steps:
     
 
 
-#- task: Maven@4
+- task: Maven@4
 
-  #inputs:
-      
-      #mavenPomFile: 'pom.xml'
-      #publishJUnitResults: true
-     # testResultsFiles: '**/surefire-reports/TEST-*.xml'
-      #javaHomeOption: 'JDKVersion'
-     # mavenVersionOption: 'Default'
-     # mavenPath: '/usr/share.apache-maven-4.246.1'
-     #mavenAuthenticateFeed: false
-     # effectivePomSkip: false      
-     # sqMavenPluginVersionChoice: 'pom'
-     # sonarQubeRunAnalysis: true
-     # goals: 'spring-javaformat:apply package'
-      
-- task: Maven@3
-  displayName: 'Execute Maven goal'
   inputs:
-    mavenPomFile: 'pom.xml'
-    options: '-Dmaven.test.failure.ignore=true'
-    #mavenOptions: '-Xmx3072m'
-    mavenVersionOption: '5'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '17'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sqMavenPluginVersionChoice: 'latest'
-    #codeCoverageToolOption: 'JaCoCo'
-    sonarQubeRunAnalysis: true
-    testResultsFiles: '**/TEST-*.xml'
-    goals: '-Dcheckstyle.skip spring-javaformat:apply  package -e'
-    #goals: 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=murt30-1'
+      
+      mavenPomFile: 'pom.xml'
+      publishJUnitResults: true
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      javaHomeOption: 'JDKVersion'
+      mavenVersionOption: 'Default'
+      mavenPath: '/usr/share.apache-maven-4.246.1'
+      mavenAuthenticateFeed: false
+      effectivePomSkip: false      
+      sqMavenPluginVersionChoice: 'pom'
+      sonarQubeRunAnalysis: true
+      goals: '-Dcheckstyle.skip spring-javaformat:apply package'
+      
+#- task: Maven@3
+#  displayName: 'Execute Maven goal'
+#  inputs:
+#    mavenPomFile: 'pom.xml'
+#    options: '-Dmaven.test.failure.ignore=true'
+#    #mavenOptions: '-Xmx3072m'
+#    mavenVersionOption: '5'
+#    javaHomeOption: 'JDKVersion'
+#    jdkVersionOption: '17'
+#    jdkArchitectureOption: 'x64'
+#    publishJUnitResults: true
+#    mavenAuthenticateFeed: false
+#    effectivePomSkip: false
+#    sqMavenPluginVersionChoice: 'latest'
+#    #codeCoverageToolOption: 'JaCoCo'
+#    sonarQubeRunAnalysis: true
+#    testResultsFiles: '**/TEST-*.xml'
+#    goals: '-Dcheckstyle.skip spring-javaformat:apply  package -e'
+#    goals: 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=murt30-1'
 - task: SonarCloudAnalyze@3
 
   inputs:
