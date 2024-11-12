@@ -25,6 +25,7 @@ steps:
         organization: 'murt30'
         #organization: 'spring-petclinic'
         scannerMode: 'Other'
+        sonar.projectKey: 'murt30-1'
 
 
 
