@@ -46,7 +46,7 @@ steps:
       testResultsFiles: '**/surefire-reports/TEST-*.xml'
       javaHomeOption: 'JDKVersion'
       mavenVersionOption: 'Default'
-      mavenPath: '/usr/share.apache-maven-4.246.1'
+      #mavenPath: '/usr/share.apache-maven-4.246.1'
       mavenAuthenticateFeed: false
       effectivePomSkip: false      
       sqMavenPluginVersionChoice: 'pom'
