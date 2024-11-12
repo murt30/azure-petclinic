@@ -70,7 +70,7 @@ steps:
     #codeCoverageToolOption: 'JaCoCo'
     sonarQubeRunAnalysis: true
     testResultsFiles: '**/TEST-*.xml'
-    goals: '-Dcheckstyle.skip spring-javaformat:apply  package'
+    goals: '-Dcheckstyle.skip spring-javaformat:apply  package -e'
     #goals: 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=murt30-1'
 - task: SonarCloudAnalyze@3
 
